@@ -40,5 +40,6 @@ class KDMClassModel(keras.Model):
             self.kernel.sigma.assign(sigma)
         self.kdm.c_x.assign(encoded_x)
         self.kdm.c_y.assign(samples_y)
-        self.kdm.c_w.assign(keras.ops.ones((self.n_comp,)) / self.n_comp)
+        self.kdm.c_w.assign(tf.ones((self.n_comp,)) / self.n_comp)
+
 
