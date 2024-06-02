@@ -1,3 +1,6 @@
+import tensorflow as tf
+from tensorflow import keras
+from sklearn.metrics import pairwise_distances
 import keras
 import numpy as np
 from ..layers import KDMLayer, RBFKernelLayer
