@@ -1,4 +1,7 @@
 import keras
+import tensorflow as tf
+from tensorflow import keras
+from tensorflow.keras import layers
 import numpy as np
 
 def l1_loss(vals):
@@ -86,7 +89,7 @@ class KDMLayer(keras.layers.Layer):
             initializer=keras.initializers.constant(1./self.n_comp),
             trainable=self.w_train,
             name="c_w") 
-        self.eps = keras.config.epsilon()
+        self.eps = tf.keras.backend.epsilon()
 
     def call(self, inputs):        
         # Weight regularizers
